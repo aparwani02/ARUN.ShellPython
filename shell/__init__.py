@@ -12,10 +12,8 @@ def inputToProcesses(input): #takes user input, converts it into processes
 	doubleQuote = False
 
 	for character in input: #if the program finds the initial single quote, it makes note of it
-		if index == len(input)-1 and oneQuote or index == len(input)-1 and doubleQuote: #if the program spots mismatched quotes, it will raise an exception
-			raise Exception("Mismatched quotes")
 		
-		elif character == '\'' and not oneQuote:
+		if character == '\'' and not oneQuote:
 			oneQuote = True
 			startCopy += 1
 
@@ -49,6 +47,9 @@ def inputToProcesses(input): #takes user input, converts it into processes
 				startCopy = index + 1
 			doubleQuote = False #now that the quotes have ended, the boolean resets
 		
+		elif index == len(input)-1 and oneQuote or index == len(input)-1 and doubleQuote: #if the program spots mismatched quotes, it will raise an exception
+			raise Exception("Mismatched quotes")
+
 		if not oneQuote and not doubleQuote: #if there are no quotes around the words, removes spaces, adds the commands and then the arguments to be outputted
 			if character == ' ':
 				if currProcess.command == '':

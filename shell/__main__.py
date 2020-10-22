@@ -21,7 +21,7 @@ if __name__ == '__main__':
 				procList = inputToProcesses(input)
 				for process in enumerate(procList):
 					print('--------------------')
-					print('Process ' + str(process[0]))
+					print('Process: ' + str(process[0]))
 					print('--------------------')
 					print(process[1])
 			except Exception as exception: #outputs error if there's a mismatched quote

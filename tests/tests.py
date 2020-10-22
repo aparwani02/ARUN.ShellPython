@@ -55,7 +55,8 @@ class ArgumentTests(unittest.TestCase):
         self.assertEqual(arguments, [["Welcome to | the jungle"], ['aux']])
 
     
-    
+
     def testMismatchedQuotes(self): #tests user input, sees if it recognizes the mismatched quotes, and throws the appropriate exception
         self.assertRaises(Exception, shell.inputToProcesses, 'ls \"Welcome to | the jungle | ps aux\n') 
-       
+        self.assertRaises(Exception, shell.inputToProcesses, 'ls \"Welcome to" | "the jungle | ps aux\n')
+        self.assertRaises(Exception, shell.inputToProcesses, 'ls \"Welcome to" | "the jungle | ps \'aux\n')
