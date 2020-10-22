@@ -21,3 +21,8 @@ Arguments:
 2: ...
 
 The program will take a string argument, such as that in the input, and return an array of Processes
+
+
+---------------------
+
+I originally did this program in C++. However, I started having issues with my compiler, and was wasting a lot of time trying to debug that so I could run my program. Therefore, I switched to Python.
