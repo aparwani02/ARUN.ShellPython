@@ -6,6 +6,7 @@ def signal_handler(sig, frame): #if ctrl-C is pressed, the program displays this
 	print("\nShell Exiting...")
 	sys.exit(0)
 
+
 if __name__ == '__main__':
 	end = False
 	while not end:
@@ -29,3 +30,4 @@ if __name__ == '__main__':
 			
 		else:
 			sys.exit(0)
+			
